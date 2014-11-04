@@ -1,0 +1,2 @@
+dst.o: dst.c
+  cp dst.c dst.o
