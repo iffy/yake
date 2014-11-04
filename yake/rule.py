@@ -1,4 +1,5 @@
 import yaml
+import commands
 
 
 class Rule(object):
@@ -25,3 +26,6 @@ def runRule(rule, workdir):
     """
     Run a rule in a directory.
     """
+    for command in rule.commands:
+        output = commands.getoutput(command)
+        print output
